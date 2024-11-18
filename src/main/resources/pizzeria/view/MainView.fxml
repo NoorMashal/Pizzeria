@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="670.0" prefWidth="710.0" styleClass="anchor-pane" stylesheets="@/pizzeria/css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzeria.controller.MainController">
+    <children>
+        <VBox alignment="BOTTOM_CENTER" prefHeight="670.0" prefWidth="710.0" spacing="25.0" style="-fx-padding: 20;">
+            <HBox alignment="CENTER" prefHeight="281.0" prefWidth="709.0" spacing="40.0">
+                <children>
+               <VBox alignment="CENTER">
+                  <children>
+                           <Button fx:id="pizzaSelectionButton" onAction="#handlePizzaSelection" prefHeight="250.0" prefWidth="250.0">
+                               <graphic>
+                                   <ImageView fitHeight="265.0" fitWidth="252.0">
+                                       <image>
+                                           <Image url="@/pizzeria/images/pizza.jpg" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                           </Button>
+                           <Label alignment="TOP_CENTER" prefHeight="31.0" prefWidth="269.0" styleClass="button-label" text="Pizza Selection">
+                        <VBox.margin>
+                           <Insets top="10.0" />
+                        </VBox.margin></Label>
+                  </children>
+               </VBox>
+               <VBox alignment="BOTTOM_CENTER" prefHeight="243.0" prefWidth="301.0">
+                  <children>
+                           <Button fx:id="currentOrderButton" onAction="#handleCurrentOrder" prefHeight="210.0" prefWidth="262.0">
+                               <graphic>
+                                   <ImageView fitHeight="260.0" fitWidth="339.0">
+                                       <image>
+                                           <Image url="@/pizzeria/images/order.jpg" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                        <VBox.margin>
+                           <Insets bottom="3.0" />
+                        </VBox.margin>
+                           </Button>
+                           <Label alignment="CENTER" prefHeight="17.0" prefWidth="313.0" styleClass="button-label" text="Current Order">
+                        <VBox.margin>
+                           <Insets top="10.0" />
+                        </VBox.margin></Label>
+                  </children>
+               </VBox>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="297.0" prefWidth="670.0">
+                <children>
+               <VBox alignment="BOTTOM_CENTER" prefHeight="278.0" prefWidth="246.0">
+                  <children>
+                           <Button fx:id="orderHistoryButton" onAction="#handleOrderHistory">
+                               <graphic>
+                                   <ImageView fitHeight="250.0" fitWidth="250.0">
+                                       <image>
+                                           <Image url="@/pizzeria/images/IMG_0222.png" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                           </Button>
+                           <Label prefHeight="38.0" prefWidth="72.0" styleClass="button-label" text="Order History">
+                        <VBox.margin>
+                           <Insets top="10.0" />
+                        </VBox.margin></Label>
+                  </children>
+               </VBox>
+                </children>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

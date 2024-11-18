@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pizzeria.controller.PizzaSelectionController">
+   <GridPane prefHeight="514.0" prefWidth="800.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="362.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="71.0" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="764.0" minWidth="10.0" prefWidth="367.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="94.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="485.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+          <VBox alignment="BOTTOM_CENTER" prefHeight="485.0" prefWidth="490.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      
+                       <Label prefHeight="30.0" prefWidth="100.0" text="Selected Toppings:" />
+              <ListView fx:id="selectedToppingsList" prefHeight="260.0" prefWidth="322.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </ListView>
+      
+                             <HBox spacing="10" />
+          </VBox>
+         <VBox alignment="BOTTOM_CENTER" prefHeight="477.0" prefWidth="334.0" GridPane.rowIndex="2">
+            <children>
+         
+                             <Label prefHeight="30.0" prefWidth="103.0" text="Available Toppings:" />
+                 <ListView fx:id="availableToppingsList" prefHeight="260.0" prefWidth="314.0">
+                  <VBox.margin>
+                     <Insets left="10.0" right="10.0" />
+                  </VBox.margin>
+               </ListView>
+            </children>
+         </VBox>
+           <Button maxHeight="-Infinity" maxWidth="-Infinity" onAction="#goBackToMain" prefHeight="42.0" prefWidth="160.0" text="Back to Main">
+            <GridPane.margin>
+               <Insets left="20.0" />
+            </GridPane.margin>
+         </Button>
+         <VBox alignment="BOTTOM_CENTER" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <children>
+                  <Button fx:id="addToppingButton" onAction="#addTopping" prefHeight="28.0" prefWidth="60.0" text="&gt;&gt;" />
+                  <Button fx:id="removeToppingButton" onAction="#removeTopping" prefHeight="28.0" prefWidth="60.0" text="&lt;&lt;">
+                  <VBox.margin>
+                     <Insets bottom="30.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets bottom="40.0" />
+            </GridPane.margin>
+         </VBox>
+         <HBox GridPane.rowIndex="1">
+            <children>
+               <VBox alignment="CENTER_RIGHT" prefHeight="170.0" prefWidth="203.0" spacing="27.0">
+                  <children>
+                     <Label prefHeight="14.0" prefWidth="58.0" text="Pizza Style:" />
+                     <Label text="Size:" />
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="20.0" />
+                  </HBox.margin>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <padding>
+                     <Insets right="10.0" />
+                  </padding>
+               </VBox>
+               <VBox alignment="CENTER_LEFT" prefHeight="144.0" prefWidth="190.0" spacing="20.0">
+                  <children>
+                        <ComboBox fx:id="styleComboBox" prefHeight="20.0" prefWidth="175.0">
+                        <VBox.margin>
+                           <Insets right="10.0" />
+                        </VBox.margin>
+                     </ComboBox>
+                        <ComboBox fx:id="sizeComboBox" prefHeight="20.0" prefWidth="175.0">
+                        <VBox.margin>
+                           <Insets bottom="5.0" right="10.0" />
+                        </VBox.margin>
+                     </ComboBox>
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="10.0" />
+                  </HBox.margin>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <children>
+               <VBox alignment="CENTER_RIGHT" prefHeight="172.0" prefWidth="79.0" spacing="27.0">
+                  <children>
+                     <Label text="Pizza Type:" />
+                     <Label text="Crust: " />
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="20.0" />
+                  </HBox.margin>
+                  <padding>
+                     <Insets right="10.0" />
+                  </padding>
+               </VBox>
+               <VBox alignment="CENTER_LEFT" prefHeight="132.0" prefWidth="194.0" spacing="10.0">
+                  <children>
+                     <ComboBox fx:id="typeComboBox" prefHeight="25.0" prefWidth="175.0" />
+                     <Label fx:id="crustLabel" prefHeight="17.0" prefWidth="127.0" text="">
+                        <VBox.margin>
+                           <Insets bottom="5.0" top="10.0" />
+                        </VBox.margin>
+                     </Label>
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="16.0" />
+                  </HBox.margin>
+               </VBox>
+            </children>
+         </HBox>
+      </children>
+   </GridPane>
+   <HBox alignment="CENTER_LEFT" layoutY="532.0" prefHeight="28.0" prefWidth="140.0" spacing="2.0">
+      <children>
+         <Label prefWidth="51.0" text="Subtotal: ">
+            <HBox.margin>
+               <Insets left="15.0" />
+            </HBox.margin>
+         </Label>
+         <Label fx:id="subtotalLabel" text="\$0.00" />
+      </children>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </HBox>
+   <Button layoutX="256.0" layoutY="532.0" maxWidth="288.0" onAction="#addToOrder" prefHeight="49.0" prefWidth="288.0" text="Add to Order" />
+</AnchorPane>

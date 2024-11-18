@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('/pizzeria/images/Lexend-VariableFont_wght.ttf');
+}
+.anchor-pane {
+    -fx-background-image: url("/pizzeria/images/background1.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button {
+    -fx-padding: 0; /* Add some padding for aesthetics */
+    -fx-border-color: transparent; /* Remove border */
+    -fx-border-color: #522515; /* Border color */
+    -fx-border-width: 5px; /* Border width */
+    -fx-cursor: hand; /* Change cursor to hand on hover */
+    -fx-opacity: 1; /* Slightly transparent by default */
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-font-size: 16px; /* Font size for button text */
+    -fx-text-fill: white; /* Text color */
+    -fx-margin: 0 0 20px 0; /* Adds margin at the bottom of the button */
+}
+
+.button:hover {
+    -fx-opacity: 1; /* Fully opaque on hover */
+    -fx-scale-x: 1.05; /* Slightly enlarge on hover */
+    -fx-scale-y: 1.05; /* Slightly enlarge on hover */
+    -fx-effect: dropshadow(gaussian, rgba(127,58,34, 1), 15, 0.2, 0, 0); /* Increased shadow radius to create a blur-like effect */
+}
+
+
+.button:pressed {
+    -fx-opacity: 0.7; /* Less opaque when pressed */
+    -fx-scale-x: 0.95; /* Slightly shrink when pressed */
+    -fx-scale-y: 0.95; /* Slightly shrink when pressed */
+}
+
+.button-label {
+    -fx-background-color: #783e21; /* Slightly transparent background for the label */
+    -fx-text-fill: white; /* Text color */
+    -fx-padding: 5; /* Padding around the label */
+    -fx-font-size: 26px; /* Set font size */
+    -fx-alignment: center; /* Center alignment */
+    -fx-pref-width: 250; /* Adjust width based on button */
+    -fx-pref-height: 40; /* Set a fixed height */
+    -fx-font-family: 'Lexend';
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-background-radius: 5; /* Matches border radius */
+    -fx-margin: 20px; /* Adds margin at the bottom of the button */
+}
+
+

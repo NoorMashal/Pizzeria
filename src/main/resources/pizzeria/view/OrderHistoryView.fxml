@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pizzeria.controller.OrderHistoryController"
+            prefHeight="692.0" prefWidth="710.0">
+
+    <VBox spacing="20" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+        <!-- Top Controls -->
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Button fx:id="backButton" text="Back to Main" onAction="#handleBackToMain"/>
+            <Label text="Select Order Number:"/>
+            <ComboBox fx:id="orderNumberComboBox" prefWidth="150"/>
+            <Button fx:id="cancelOrderButton" text="Cancel Selected Order"
+                    onAction="#handleCancelOrder"/>
+        </HBox>
+
+        <!-- Orders ListView -->
+        <ListView fx:id="ordersListView" VBox.vgrow="ALWAYS"/>
+
+        <!-- Order Total Display -->
+        <HBox alignment="CENTER_RIGHT" spacing="5">
+            <Label text="Total (tax included):" />
+            <Label fx:id="totalLabel" text="\$0.00"/>
+        </HBox>
+
+        <!-- Export Button -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button fx:id="exportButton" text="Export Orders to File"
+                    onAction="#handleExportOrders"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>
